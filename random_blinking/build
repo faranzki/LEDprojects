@@ -1,0 +1,37 @@
+What you need to build the LED strip:
+
+You need addressable RGB LEDs. My code uses the FastLED library and the Neopixel protocol, which is compatible with the ws2811, ws2812 or ws2812B chip sets.
+So if you want to use the code as it is, buy LEDs with these chip sets. 
+https://www.aliexpress.com/item/DC5V-1m-4m-5m-WS2812B-Smart-led-pixel-strip-Black-White-PCB-30-60-144-leds/32337440906.html?spm=a2g0s.9042311.0.0.32c64c4d5rT7Px
+
+You need something to upload the code to, that is connected to the LED strip. I use LoLin ESP8266. 
+With this, I can also address the LEDs through Wifi, and alternate for instance between party mode and a constant colour through wifi.
+This code is not connecting the LEDs to Wifi though. 
+https://www.aliexpress.com/item/LoLin-V3-NodeMcu-Lua-CH340G-ESP8266-WIFI-Internet-Development-Board-Module/32822402463.html?spm=a2g0s.9042311.0.0.32c64c4d5rT7Px
+
+You need a power supply. I use a 5V 4A charger.
+https://www.aliexpress.com/item/5V-4A-20W-laptop-charger-AC-power-adapter-for-Lenovo-Miix-320-10ICR-310-10ICR-300/32829353079.html?spm=a2g0s.9042311.0.0.32c64c4d5rT7Px
+
+You need a micro USB male connector to connect the LoLin. I found these on Aliexpress which you have to assemble yourself; also they are a bit fragile. Maybe don't get these.
+https://www.aliexpress.com/item/Free-shipping-10pcs-Micro-USB-5PIN-Welding-Type-Male-Plug-Connectors-Charger-5P-USB-Tail-Charging/32726724857.html?spm=a2g0s.9042311.0.0.32c64c4d5rT7Px
+
+You need wire. I use random wires I found in the trash. 
+
+You need a soldering iron and solder. I used the one in the Octanis Microverse.
+microverse.ch
+
+How to assemble everything:
+
+For my purposes, I had to cut and reconnect the LED strip with wires. Do as you need for your respective project / location.
+
+You need to cut off the connector of the charger (in my case a laptop charger). Connect the 5V cable of the charger to the 5V input of the LED strip and the 5V input of the micro USB male connector. Connect the ground of the charger to the ground of the LED strip and to the ground of the micro USB male connector. For this, I recommend using a soldering iron and solder. 
+
+Connect a wire to data pin 5 of the LoLin (which is the data output pin I specified in the code) and connect it to the data input of the LED strip.
+
+Upload the code to the LoLin.
+
+Plug in the micro USB male connector to the LoLin. 
+
+Plug in the power supply.
+
+The party should now start. 
